@@ -1,0 +1,47 @@
+
+<div class="postjob-area m-6">
+<div class="card">
+  <h5>Firm Details</h5>
+</div>
+<div class="formgrid grid">
+
+  <div class="field col-4">
+    <label for="firstname2">Job Title</label>
+    <input pInputText id="positions" type="text" placeholder="e.g. 4" class="text-base text-color surface-overlay p-3 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+  </div>
+  <div class="field col-4">
+      <label for="firstname2">Organization</label>
+      <input id="firstname2" type="text"  placeholder="e.g. Akriyan Technologies" class="text-base text-color surface-overlay p-3 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+  </div>
+  <div class="field col-4">
+      <label for="firstname2">No of positions</label>
+      <input pInputText id="positions" type="text" placeholder="e.g. 4" class="text-base text-color surface-overlay p-3 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+  </div>
+  <div class="field col-4">
+      <label for="firstname2">Expected Joining</label>
+      <input pInputText id="positions" placeholder="in Days" type="text" class="text-base text-color surface-overlay p-3 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+  </div>
+  <div class="field col-4">
+      <label for="lastname2">Preferred Locations</label>
+      <p-multiSelect
+        [options]="cities"
+        [(ngModel)]="selectedCities"
+        [style]="{'width':'100%'}"
+        optionLabel="name"
+        placeholder="Select Cities" />
+  </div>
+</div>
+
+<div class="card">
+  <h5>Upload Job Description</h5>
+  <app-editor></app-editor>
+</div>
+
+<div class="card flex justify-content-center gap-4 mt-3">
+  <p-button
+      label="Post Job"
+      icon="pi pi-check"
+      [loading]="loading"
+      (onClick)="load()" />
+</div>
+</div>
